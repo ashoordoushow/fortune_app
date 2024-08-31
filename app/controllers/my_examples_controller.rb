@@ -26,6 +26,17 @@ fortunes = [                         # I used chatgpt to create an 'array' place
 # this is just to see what it prints in the server (in terminal) => 'puts "Your predicted lotto numbers are: #{lotto_numbers.sort.join(', ')}"'
     end
 
+    # Every time a user visits/refreshes the page, 
+    # the page should tell the user the number of visits made to 
+    # that page so far. NOTE: This is impossible, but you should try your hand at 
+    # this for a few minutes to discover why it’s impossible.
+
+    def page_count
+        page_count = 0  # we are trying to count the number of times someone visits the page
+        page_count += 1
+        render json: {message: page_count}
+    end
+
 end
 
 
